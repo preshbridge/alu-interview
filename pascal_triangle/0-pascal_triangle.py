@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""Create a function def pascal_triangle(n):
-that returns a list of lists of integers representing
-the Pascal triangle"""
+""" Pascal's Triangle."""
 
 
-def pascal_triangle(n):
-    """function that returns a list of lists of integers"""
-    if n <= 0:
+def pascal_triangle(a):
+    """Generate Pascal's Triangle up to row 'a'"""
+    if a <= 0:
         return []
     triangle = [[1]]
-    for i in range(1, n):
+    for i in range(1, a):
         row = [1]
         for j in range(1, i):
             row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
